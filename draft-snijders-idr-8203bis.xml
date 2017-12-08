@@ -157,7 +157,7 @@
 
         <section anchor="acknowledgements" title="Acknowledgements">
             <t>
-                The authors would like to gratefully acknowledge ....
+                The authors would like to gratefully acknowledge Misha Grishin (MSK-IX) for raising the length issue.
             </t>
             <t>
                 The authors would like to thank Jakob Heitz and John Scudder for their work on <xref target="RFC8203"/>.
