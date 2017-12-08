@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <?rfc comments="yes"?>
 <?rfc compact="yes"?>
@@ -72,12 +72,9 @@
                 The <xref target="RFC8203">Administrative Shutdown Communication</xref> is a simple mechanism to transit a short freeform <xref target="RFC3629">UTF-8</xref> message as part of a <xref target="RFC4271">Cease NOTIFICATION message</xref> to inform the peer why the BGP session is being shutdown or reset.
             </t>
             <t>
-                Feedback from operators based in regions which predominantly use multibyte character sets, showed
-                that messages similar in meaning to what can be send in other languages in using single-byte encoding
-                failed to fit within the Length constraints as specified by <xref target="RFC8203" />. For example,
-                the phrase: 'Planned works to adding switch to stack. Completion time - 30 minutes' has length 69 bytes.
-                Its translation in Russian 'Плановые работы по добавлению коммутатора в стек. Время завершения - 30 минут'
-                has length 139 bytes.
+                Feedback from operators based in regions which predominantly use multibyte character sets, showed that messages similar in meaning to what can be send in other languages in using single-byte encoding failed to fit within the Length constraints as specified by <xref target="RFC8203" />.
+                For example, the phrase: 'Planned work to add switch to stack. Completion time - 30 minutes' has length 65 bytes.
+                Its translation in Russian 'Плановые работы по добавлению коммутатора в стек. Время завершения - 30 минут' (See PDF for non-ASCII character string) has length 139 bytes.
             </t>
 
             <t>
