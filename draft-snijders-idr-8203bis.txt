@@ -186,7 +186,8 @@ Internet-Draft                BGP Shutdown                 December 2017
 
 Appendix A.  Acknowledgements
 
-   The authors would like to gratefully acknowledge ....
+   The authors would like to gratefully acknowledge Misha Grishin (MSK-
+   IX) for raising the length issue.
 
    The authors would like to thank Jakob Heitz and John Scudder for
    their work on [RFC8203].
@@ -206,7 +207,6 @@ Authors' Addresses
    Qrator Labs
 
    Email: aa@qrator.net
-
 
 
 
