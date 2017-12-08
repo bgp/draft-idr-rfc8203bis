@@ -6,7 +6,7 @@ IDR                                                          J. Snijders
 Internet-Draft                                                       NTT
 Updates: 8203 (if approved)                                    A. Azimov
 Intended status: Standards Track                                  Qrator
-Expires: June 10, 2018                                  December 7, 2017
+Expires: June 11, 2018                                  December 8, 2017
 
 
            Extended BGP Administrative Shutdown Communication
@@ -39,7 +39,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on June 10, 2018.
+   This Internet-Draft will expire on June 11, 2018.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Snijders & Azimov         Expires June 10, 2018                 [Page 1]
+Snijders & Azimov         Expires June 11, 2018                 [Page 1]
 
 Internet-Draft                BGP Shutdown                 December 2017
 
@@ -85,13 +85,34 @@ Table of Contents
    multibyte character sets, showed that messages similar in meaning to
    what can be send in other languages in using single-byte encoding
    failed to fit within the Length constraints as specified by
-   [RFC8203].  This document extends the length of the Administrative
-   Shutdown Communication to 255 octets.
+   [RFC8203].  For example, the phrase: 'Planned work to add switch to
+   stack.  Completion time - 30 minutes' has length 65 bytes.  Its
+   translation in Russian
+   '&#1055;&#1083;&#1072;&#1085;&#1086;&#1074;&#1099;&#1077;
+   &#1088;&#1072;&#1073;&#1086;&#1090;&#1099; &#1087;&#1086; &#1076;&#10
+   86;&#1073;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1102; &#1082;&#
+   1086;&#1084;&#1084;&#1091;&#1090;&#1072;&#1090;&#1086;&#1088;&#1072;
+   &#1074; &#1089;&#1090;&#1077;&#1082;.
+   &#1042;&#1088;&#1077;&#1084;&#1103; &#1079;&#1072;&#1074;&#1077;&#108
+   8;&#1096;&#1077;&#1085;&#1080;&#1103; - 30
+   &#1084;&#1080;&#1085;&#1091;&#1090;' (See PDF for non-ASCII character
+   string) has length 139 bytes.
+
+   This document extends the length of the Administrative Shutdown
+   Communication to 255 octets.
 
 2.  Changes to RFC 8203
 
    This section updates [RFC8203] to specify the maximum length of an
    Administrative Shutdown Communication.
+
+
+
+
+Snijders & Azimov         Expires June 11, 2018                 [Page 2]
+
+Internet-Draft                BGP Shutdown                 December 2017
+
 
    The following paragraph replaces the Length definition in Section 2
    (Shutdown Communication):
@@ -104,15 +125,6 @@ Table of Contents
 
    The following paragraph replaces the second paragraph of Section 5
    (Security Considerations):
-
-
-
-
-
-Snijders & Azimov         Expires June 10, 2018                 [Page 2]
-
-Internet-Draft                BGP Shutdown                 December 2017
-
 
       As BGP Shutdown Communications are likely to appear in syslog
       output, there is a risk that carefully constructed Shutdown
@@ -151,6 +163,13 @@ Internet-Draft                BGP Shutdown                 December 2017
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
               2003, <https://www.rfc-editor.org/info/rfc3629>.
 
+
+
+Snijders & Azimov         Expires June 11, 2018                 [Page 3]
+
+Internet-Draft                BGP Shutdown                 December 2017
+
+
    [RFC4271]  Rekhter, Y., Ed., Li, T., Ed., and S. Hares, Ed., "A
               Border Gateway Protocol 4 (BGP-4)", RFC 4271,
               DOI 10.17487/RFC4271, January 2006,
@@ -159,16 +178,6 @@ Internet-Draft                BGP Shutdown                 December 2017
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
-
-
-
-
-
-
-Snijders & Azimov         Expires June 10, 2018                 [Page 3]
-
-Internet-Draft                BGP Shutdown                 December 2017
-
 
    [RFC8203]  Snijders, J., Heitz, J., and J. Scudder, "BGP
               Administrative Shutdown Communication", RFC 8203,
@@ -212,13 +221,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-
-
-
-
-Snijders & Azimov         Expires June 10, 2018                 [Page 4]
+Snijders & Azimov         Expires June 11, 2018                 [Page 4]
