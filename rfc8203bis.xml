@@ -176,6 +176,18 @@ below:
                 If a Shutdown Communication with an invalid Length value, or an invalid UTF-8 sequence is received, a message indicating this event SHOULD be logged for the attention of the operator.
                 An erroneous or malformed Shutdown Communication itself MAY be logged in a hexdump format.
             </t>
+            <!--
+            <t>
+                A NOTIFICATION message is permitted to carry any bytes in the data field, not just a Shutdown Communication.
+                A length value that indicates that the Shutdown Communication ends before the end of the NOTIFICATION message is not an error.
+                It indicates that either the data field is not a Shutdown Communication or another field follows the Shutdown Communication.
+                A length value that indicates that the Shutdown Communication ends after the end of the NOTIFICATION message is not an error.
+                It indicates that the data field is not a Shutdown Communication.
+                If an unknown, but otherwise valid UTF-8 sequence is received, then that sequence should be displayed in a way to make it clear that it is unknown.
+                If an invalid UTF-8 sequence is received, then it indicated that the data field is not a Shutdown Communication.
+                If it is determined that the data field does not contain a Shutdown Communication, then the NOTIFICATION message should be treated as if the Shutdown Communication did not exist, but that the data field is other data.
+            </t>
+            -->
         </section>
 
         <section anchor="iana" title="IANA Considerations">
