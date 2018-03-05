@@ -1,6 +1,8 @@
 RFC8203bis IETF Draft Repository
 ================================
 
+Current working document: rfc8203bis.xml
+
 Authoring Conventions
 ---------------------
 
