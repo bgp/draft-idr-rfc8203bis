@@ -267,7 +267,7 @@ below:
                 The authors would like to thank Enke Chen and Vincent Gillet for their work on <xref target="RFC4486"/> and granting the related BCP 78 rights to the IETF Trust.
             </t>
             <t>
-                The authors would like to gratefully acknowledge Misha Grishin (MSK- IX) for raising the length issue.
+                The authors would like to acknowledge Misha Grishin (MSK-IX) for raising awareness that <xref target="RFC8203"/>'s length specification was insufficient in context of multibyte character sets.
             </t>
         </section>
 
