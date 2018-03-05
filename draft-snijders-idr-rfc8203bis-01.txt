@@ -93,7 +93,7 @@ Table of Contents
 
    It can be troublesome for an operator to correlate a BGP-4 [RFC4271]
    session teardown in the network with a notice that was transmitted
-   via off-line methods such email or telephone calls.  This document
+   via offline methods such email or telephone calls.  This document
    updates [RFC4486] by specifying a mechanism to transmit a short
    freeform UTF-8 [RFC3629] message as part of a Cease NOTIFICATION
    message [RFC4271] to inform the peer why the BGP session is being
@@ -146,7 +146,7 @@ Internet-Draft         BGP Shutdown Communication             March 2018
 
    Mechanisms concerning the reporting of information contained in the
    Shutdown Communication are implementation specific but SHOULD include
-   methods such as SYSLOG [RFC5424].
+   methods such as Syslog [RFC5424].
 
 3.  Operational Considerations
 
@@ -155,10 +155,10 @@ Internet-Draft         BGP Shutdown Communication             March 2018
    include out-of-band reference materials.  An example of a useful
    Shutdown Communication would be:
 
-   "[TICKET-1-1438367390] software upgrade, back in 2 hours"
+   "[TICKET-1-1438367390] software upgrade; back in 2 hours"
 
    "[TICKET-1-1438367390]" is a ticket reference with significance to
-   both the sender and receiver, followed by a brief human readable
+   both the sender and receiver, followed by a brief human-readable
    message regarding the reason for the BGP session shutdown followed by
    an indication about the length of the maintenance.  The receiver can
 
@@ -187,15 +187,15 @@ Internet-Draft         BGP Shutdown Communication             March 2018
    subcode "Administrative Shutdown", and at subcode "Administrative
    Reset" in the "Cease NOTIFICATION message subcodes" registry under
    the "Border Gateway Protocol (BGP) Parameters" group in addition to
-   [RFC4486].
+   [RFC4486] and [RFC8203].
 
 6.  Security Considerations
 
    This document uses UTF-8 encoding for the Shutdown Communication.
-   There are a number of security issues with UNICODE.  Implementers and
-   operator are advised to review UNICODE TR36 [UTR36] to learn about
-   these issues.  UTF-8 "Shortest Form" encoding is REQUIRED to guard
-   against the technical issues outlined in UTR36.
+   There are a number of security issues with Unicode.  Implementers and
+   operators are advised to review Unicode Technical Report #36 [UTR36]
+   to learn about these issues.  UTF-8 "Shortest Form" encoding is
+   REQUIRED to guard against the technical issues outlined in [UTR36].
 
    As BGP Shutdown Communications are likely to appear in syslog output,
    there is a risk that carefully constructed Shutdown Communication
@@ -215,8 +215,8 @@ Internet-Draft         BGP Shutdown Communication             March 2018
    related considerations in [RFC4271] and [RFC4272].
 
    Users of this mechanism should consider applying data minimization
-   practises as outlined in Section 6.1 [RFC6973] as a received Shutdown
-   Communication may be used at the receiver's discretion.
+   practices as outlined in Section 6.1 of [RFC6973] because a received
+   Shutdown Communication may be used at the receiver's discretion.
 
 
 
@@ -363,7 +363,7 @@ Authors' Addresses
    Cisco
    170 West Tasman Drive
    San Jose, CA  95134
-   USA
+   United States of America
 
    Email: jheitz@cisco.com
 
@@ -372,7 +372,7 @@ Authors' Addresses
    Juniper Networks
    1194 N. Mathilda Ave
    Sunnyvale, CA  94089
-   USA
+   United States of America
 
    Email: jgs@juniper.net
 
