@@ -43,7 +43,7 @@
                     <city>San Jose</city>
                     <region>CA</region>
                     <code>95134</code>
-                    <country>USA</country>
+                    <country>United States of America</country>
                 </postal>
                 <email>jheitz@cisco.com</email>
             </address>
@@ -57,7 +57,7 @@
                     <city>Sunnyvale</city>
                     <region>CA</region>
                     <code>94089</code>
-                    <country>USA</country>
+                    <country>United States of America</country>
                 </postal>
                 <email>jgs@juniper.net</email>
             </address>
@@ -100,7 +100,7 @@
     <middle>
         <section anchor="intro" title="Introduction">
             <t>
-                It can be troublesome for an operator to correlate a <xref target="RFC4271">BGP-4</xref> session teardown in the network with a notice that was transmitted via off-line methods such email or telephone calls.
+                It can be troublesome for an operator to correlate a <xref target="RFC4271">BGP-4</xref> session teardown in the network with a notice that was transmitted via offline methods such email or telephone calls.
                 This document updates <xref target="RFC4486" /> by specifying a mechanism to transmit a short freeform <xref target="RFC3629">UTF-8</xref> message as part of a <xref target="RFC4271">Cease NOTIFICATION message</xref> to inform the peer why the BGP session is being shutdown or reset.
             </t>
         </section>
@@ -153,7 +153,7 @@ below:
             <t>
                 Mechanisms concerning the reporting of information contained in
                 the Shutdown Communication are implementation specific but
-                SHOULD include methods such as <xref target="RFC5424">SYSLOG</xref>.
+                SHOULD include methods such as <xref target="RFC5424">Syslog</xref>.
             </t>
         </section>
 
@@ -164,15 +164,10 @@ below:
                 session and include out-of-band reference materials.  An
                 example of a useful Shutdown Communication would be:
             </t>
-            <t>"[TICKET-1-1438367390] software upgrade, back in 2 hours"</t>
+            <t>"[TICKET-1-1438367390] software upgrade; back in 2 hours"</t>
             <t>
-                "[TICKET-1-1438367390]" is a ticket reference with significance
-                to both the sender and receiver, followed by a brief human
-                readable message regarding the reason for the BGP session
-                shutdown followed by an indication about the length of the
-                maintenance. The receiver can now use the string
-                'TICKET-1-1438367390' to search in their email archive to find
-                more details.
+                "[TICKET-1-1438367390]" is a ticket reference with significance to both the sender and receiver, followed by a brief human-readable message regarding the reason for the BGP session shutdown followed by an indication about the length of the maintenance.
+                The receiver can now use the string 'TICKET-1-1438367390' to search in their email archive to find more details.
             </t>
         </section>
 
@@ -185,20 +180,16 @@ below:
 
         <section anchor="iana" title="IANA Considerations">
             <t>
-                Per this document, IANA is requested to reference this document
-                at subcode "Administrative Shutdown", and at subcode
-                "Administrative Reset" in the "Cease NOTIFICATION message
-                subcodes" registry under the "Border Gateway Protocol (BGP)
-                Parameters" group in addition to <xref target="RFC4486" />.
+                Per this document, IANA is requested to reference this document at subcode "Administrative Shutdown", and at subcode "Administrative Reset" in the "Cease NOTIFICATION message subcodes" registry under the "Border Gateway Protocol (BGP) Parameters" group in addition to <xref target="RFC4486" /> and <xref target="RFC8203" />.
             </t>
         </section>
 
         <section anchor="security" title="Security Considerations">
             <t>
                 This document uses UTF-8 encoding for the Shutdown Communication.
-                There are a number of security issues with UNICODE.
-                Implementers and operator are advised to review <xref target="UTR36">UNICODE TR36</xref> to learn about these issues.
-                UTF-8 "Shortest Form" encoding is REQUIRED to guard against the technical issues outlined in UTR36.
+                There are a number of security issues with Unicode.
+                Implementers and operators are advised to review <xref target="UTR36">Unicode Technical Report #36</xref> to learn about these issues.
+                UTF-8 "Shortest Form" encoding is REQUIRED to guard against the technical issues outlined in <xref target="UTR36" />.
             </t>
             <t>
                 As BGP Shutdown Communications are likely to appear in syslog output, there is a risk that carefully constructed Shutdown Communication might be formatted by receiving systems in a way to make them appear as additional syslog messages.
@@ -211,7 +202,7 @@ below:
                 Refer to the related considerations in <xref target="RFC4271" /> and <xref target="RFC4272" />.
             </t> 
             <t>
-                Users of this mechanism should consider applying data minimization practises as outlined in <xref target="RFC6973">Section 6.1</xref> as a received Shutdown Communication may be used at the receiver's discretion.
+                Users of this mechanism should consider applying data minimization practices as outlined in <xref target="RFC6973">Section 6.1 of</xref> because a received Shutdown Communication may be used at the receiver's discretion.
             </t>
         </section>
 
