@@ -13,7 +13,7 @@
 <?rfc strict="yes"?>
 
 <rfc category="std"
-    docName="draft-snijders-idr-rfc8203bis-01"
+    docName="draft-idr-rfc8203bis-00"
     updates="4486"
     obsoletes="8203"
     ipr="trust200902">
