@@ -13,7 +13,7 @@
 <?rfc strict="yes"?>
 
 <rfc category="std"
-    docName="draft-ietf-idr-rfc8203bis-01"
+    docName="draft-ietf-idr-rfc8203bis-02"
     updates="4486"
     obsoletes="8203"
     ipr="trust200902">
@@ -237,7 +237,7 @@ below:
            As of today these vendors have produced an implementation of the
            Shutdown Communication:
            <list style="symbols">
-                <t>...</t>
+                <t>Juniper Junos<t>
                 <t>...</t>
                 <t>...</t>
            </list>
