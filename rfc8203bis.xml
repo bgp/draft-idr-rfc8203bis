@@ -63,9 +63,9 @@
             </address>
         </author>
 
-		<author fullname="Alexander Azimov" initials="A." surname="Azimov">
-			<organization abbrev="Qrator">Qrator Labs</organization>
-			<address>
+        <author fullname="Alexander Azimov" initials="A." surname="Azimov">
+            <organization abbrev="Qrator">Qrator Labs</organization>
+            <address>
                 <email>aa@qrator.net</email>
             </address>
         </author>
@@ -238,7 +238,7 @@ below:
            Shutdown Communication:
            <list style="symbols">
                 <t>Juniper Junos</t>
-                <t>...</t>
+                <t>OpenBSD OpenBGPD</t>
                 <t>...</t>
            </list>
        </t>
