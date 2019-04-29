@@ -13,7 +13,7 @@
 <?rfc strict="yes"?>
 
 <rfc category="std"
-    docName="draft-ietf-idr-rfc8203bis-03"
+    docName="draft-ietf-idr-rfc8203bis-04"
     updates="4486"
     obsoletes="8203"
     ipr="trust200902">
@@ -239,6 +239,7 @@ below:
            <list style="symbols">
                 <t>Juniper Junos</t>
                 <t>OpenBSD OpenBGPD</t>
+                <t>NIC.CZ BIRD</t>
                 <t>...</t>
            </list>
        </t>
